@@ -1,0 +1,2 @@
+
+mydog = Dog(breed="Huskies")
