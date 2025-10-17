@@ -140,6 +140,32 @@ class LinkedList:
         self.length -= 1
         return poped_node.value
 
+    def pop(self):
+        if self.length == 0:
+            return None
+
+        elif self.length == 1:
+            popped_node = self.head
+            self.head = None
+            self.tail = None
+            self.length = 0
+            return popped_node.value
+
+        else:
+            popped_node = self.tail
+            temp = self.head
+
+            while temp.next is not self.tail:
+                temp = temp.next
+
+            self.tail = temp
+            self.tail.next = None
+            self.length -= 1
+            return popped_node.value
+
+
+
+
 
 
 
